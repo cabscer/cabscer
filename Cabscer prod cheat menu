@@ -73,11 +73,11 @@ script.onload = function() {
       padding: 10px;
       border: 1px solid #ddd;
       border-radius: 4px;
-      background: #f9f9f9;
+      background: #b83241;
     }
     #cheatMenu button {
       padding: 10px;
-      background: #fa8a28;
+      background: #b83241;
       border: none;
       color: #fff;
       cursor: pointer;
@@ -87,7 +87,7 @@ script.onload = function() {
       margin-bottom: 10px;
     }
     #cheatMenu button:hover {
-      background: #fa7828;
+      background: #b83241;
     }
     #cheatMenu .description {
       font-size: 12px;
@@ -99,7 +99,7 @@ script.onload = function() {
       position: fixed;
       top: 0;
       left: 0;
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(184, 50, 64, 0.8);
       color: #000;
       padding: 5px;
       cursor: pointer;
@@ -157,15 +157,15 @@ script.onload = function() {
       width: 26px;
       left: 4px;
       bottom: 4px;
-      background-color: white;
+      background-color: dark red;
       -webkit-transition: .4s;
       transition: .4s;
     }
     .toggle-switch input:checked + .slider {
-      background-color: #2196F3;
+      background-color: #b83241;
     }
     .toggle-switch input:focus + .slider {
-      box-shadow: 0 0 1px #2196F3;
+      box-shadow: 0 0 1px #b83241;
     }
     .toggle-switch input:checked + .slider:before {
       -webkit-transform: translateX(26px);

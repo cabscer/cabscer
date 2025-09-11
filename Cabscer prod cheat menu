@@ -181,7 +181,7 @@ script.onload = function() {
   cheatMenu.className = "hidden";
   cheatMenu.innerHTML = `
     <h1>Cabscer Prodigy Hack Menu X</h1>
-    <p>Join our discord community to stay up-to-date on the latest hacks and receive helpful support from our team. Simply click this link: <a href="https://discord.gg/KXDrcZQV6R" target="_blank">https://discord.gg/KXDrcZQV6R</a> or check out our channel: <a href="https://www.youtube.com/@CrackinPMG" target="_blank">https://www.youtube.com/@CrackinPMG</a></p>
+    <p>hi
 <div class="section">
   <h2>Character Enhancements</h2>
   <div class="button-row">

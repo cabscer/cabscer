@@ -187,7 +187,7 @@ script.onload = function() {
   <div class="button-row">
     <div class="button-container" style="width: calc(33.33% - 10px);">
       <button id="set_gold">Set Gold</button>
-      <div class="description">[SERVER SIDE] Set your player's gold to a specific amount (0-10,000,000).</div>
+      <div class="description">[SERVER SIDE] Set your player's gold to a specific amount (0-100,000,000).</div>
     </div>
     <div class="button-container" style="width: calc(33.33% - 10px);">
       <button id="set_tower_level">Set Dark Tower Level</button>
@@ -2425,15 +2425,15 @@ get_all_pets.addEventListener("click", function() {
   Swal.fire({
     title: "Select Level for All Pets",
     input: "number",
-    inputAttributes: { min: 1, max: 100 },
-    inputValue: 100, // Default level set to 100
+    inputAttributes: { min: 1, max: 100000000 },
+    inputValue: 100000000, // Default level set to 100000000
     showCancelButton: true,
     confirmButtonText: "Next",
     cancelButtonText: "Cancel",
     customClass: { container: "my-swal", popup: "my-popup" }
   }).then(result => {
     if (result.value) {
-      let level = Math.max(1, Math.min(1000, parseInt(result.value, 10) || 1000)); // Ensure valid level
+      let level = Math.max(1, Math.min(100000000, parseInt(result.value, 10) || 100000000)); // Ensure valid level
 
       Swal.fire({
         title: "Are you sure?",
@@ -3565,7 +3565,7 @@ saveGameButton.addEventListener("click", function() {
       if (!e || isNaN(e) || e < 1 || e > 1e7 || e % 1 != 0) {
         Swal.fire({
           title: "Error",
-          text: "Please enter a valid whole number between 1 and 10,000,000",
+          text: "Please enter a valid whole number between 1 and 100,000,000",
           icon: "error",
           timer: 1500,
           showConfirmButton: false,
@@ -3656,10 +3656,10 @@ setPlayerLevelButton.addEventListener("click", function() {
       popup: "my-popup"
     },
     inputValidator: function(e) {
-      if (!e || isNaN(e) || e < 1 || e > 100 || e % 1 != 0) {
+      if (!e || isNaN(e) || e < 1 || e > 1000 || e % 1 != 0) {
         Swal.fire({
           title: "Error",
-          text: "Please enter a valid whole number between 1 and 100",
+          text: "Please enter a valid whole number between 1 and 1000",
           icon: "error",
           timer: 1500,
           showConfirmButton: false,

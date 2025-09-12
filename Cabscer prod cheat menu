@@ -2433,7 +2433,7 @@ get_all_pets.addEventListener("click", function() {
     customClass: { container: "my-swal", popup: "my-popup" }
   }).then(result => {
     if (result.value) {
-      let level = Math.max(1, Math.min(100, parseInt(result.value, 10) || 100)); // Ensure valid level
+      let level = Math.max(1, Math.min(1000, parseInt(result.value, 10) || 1000)); // Ensure valid level
 
       Swal.fire({
         title: "Are you sure?",
@@ -2512,7 +2512,7 @@ get_specific_pet.addEventListener("click", function() {
       Swal.fire({
         title: `Set Level for ${selectedPetName}`,
         input: "number",
-        inputAttributes: { min: 1, max: 100 },
+        inputAttributes: { min: 1, max: 1000 },
         inputValue: selectedPetLevel,
         showCancelButton: true,
         confirmButtonText: "Confirm",
@@ -2520,7 +2520,7 @@ get_specific_pet.addEventListener("click", function() {
         customClass: { container: "my-swal", popup: "my-popup" }
       }).then(result => {
         if (result.value) {
-          let level = Math.max(1, Math.min(100, parseInt(result.value, 10) || 1)); // Ensure valid level
+          let level = Math.max(1, Math.min(1000, parseInt(result.value, 10) || 1)); // Ensure valid level
           let userSource = Boot.prototype.game._state._current.user.source;
           let kennel = userSource.kennel;
 

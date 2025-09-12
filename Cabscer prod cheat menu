@@ -2512,7 +2512,7 @@ get_specific_pet.addEventListener("click", function() {
       Swal.fire({
         title: `Set Level for ${selectedPetName}`,
         input: "number",
-        inputAttributes: { min: 1, max: 1000 },
+        inputAttributes: { min: 1, max: 100000000 },
         inputValue: selectedPetLevel,
         showCancelButton: true,
         confirmButtonText: "Confirm",

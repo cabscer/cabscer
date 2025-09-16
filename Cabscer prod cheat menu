@@ -3562,10 +3562,10 @@ saveGameButton.addEventListener("click", function() {
       popup: "my-popup"
     },
     inputValidator: function(e) {
-      if (!e || isNaN(e) || e < 1 || e > 1e7 || e % 1 != 0) {
+      if (!e || isNaN(e) || e < 1 || e > 1e9 || e % 1 != 0) {
         Swal.fire({
           title: "Error",
-          text: "Please enter a valid whole number between 1 and 100,000,000",
+          text: "Please enter a valid whole number between 1 and 1,000,000,000",
           icon: "error",
           timer: 1500,
           showConfirmButton: false,
